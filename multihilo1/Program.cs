@@ -23,14 +23,14 @@ class Program
         Console.WriteLine($"J2 elige: {_eleccionJ2}");
     }
 
-    static void DeterminarGanador(string eleccionJ1, string eleccionJ2)
+    static void DeterminarGanador()
     {
-        if (eleccionJ1 == eleccionJ2)
+        if (_eleccionJ1 == _eleccionJ2)
         {
             Console.Write("Empate!!");
-        }else if ((eleccionJ1 == "Piedra" && eleccionJ2 == "Tijera") ||
-                  (eleccionJ1 == "Papel" && eleccionJ2 == "Piedra") ||
-                  (eleccionJ1 == "Tijera" && eleccionJ2 == "Papel"))
+        }else if ((_eleccionJ1 == "Piedra" && _eleccionJ2 == "Tijera") ||
+                  (_eleccionJ1 == "Papel" && _eleccionJ2 == "Piedra") ||
+                  (_eleccionJ1 == "Tijera" && _eleccionJ2 == "Papel"))
         {
             Console.Write("Jugador 1 gana!!");
         }
@@ -53,6 +53,6 @@ class Program
         j1.Join();
         j2.Join();
         
-        DeterminarGanador(_eleccionJ1, _eleccionJ2);
+        DeterminarGanador();
     }
 } 
